@@ -10,8 +10,8 @@ contract StructUsage {
    }
    Book book;
 
-   function setBook() public {
-      book = Book('Learn Java', 'TP', 1);
+   function setBook(string memory title, string memory author, uint book_id) public {
+      book = Book(title, author, book_id);
    }
    function getBookId() public view returns (uint) {
       return book.book_id;
